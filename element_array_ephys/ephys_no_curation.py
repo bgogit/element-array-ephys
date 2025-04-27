@@ -331,6 +331,7 @@ class EphysRecording(dj.Imported):
                     "No SpikeGLX data found for probe insertion: {}".format(key)
                 )
 
+            print(spikeglx_meta.probe_model)
             if spikeglx_meta.probe_model in supported_probe_types:
                 probe_type = spikeglx_meta.probe_model
                 electrode_query = probe.ProbeType.Electrode & {"probe_type": probe_type}
